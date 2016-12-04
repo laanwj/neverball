@@ -992,12 +992,13 @@ void r_apply_mtrl(struct s_rend *rend, int mi)
         {
             const int s = video.device_h / 4;
             const GLfloat c[3] = { 0.0f, 0.0f, 1.0f };
-
+#if 0
             glEnable (GL_POINT_SPRITE);
             glTexEnvi(GL_POINT_SPRITE, GL_COORD_REPLACE, GL_TRUE);
             glPointParameterfv_(GL_POINT_DISTANCE_ATTENUATION, c);
             glPointParameterf_ (GL_POINT_SIZE_MIN, 1);
             glPointParameterf_ (GL_POINT_SIZE_MAX, s);
+#endif
         }
         else
         {

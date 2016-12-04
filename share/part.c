@@ -252,6 +252,7 @@ void part_draw_coin(struct s_rend *rend)
         glVertexPointer(3, GL_FLOAT, sizeof (struct part_draw), coin_draw[0].p);
 #endif
 
+#if 0
         glEnable(GL_POINT_SPRITE);
         {
             const GLfloat c[3] = { 0.0f, 0.0f, 1.0f };
@@ -263,6 +264,7 @@ void part_draw_coin(struct s_rend *rend)
             glDrawArrays(GL_POINTS, 0, PART_MAX_COIN);
         }
         glDisable(GL_POINT_SPRITE);
+#endif
     }
     glDisableClientState(GL_COLOR_ARRAY);
     glEnableClientState(GL_NORMAL_ARRAY);
