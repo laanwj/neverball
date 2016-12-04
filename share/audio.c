@@ -14,6 +14,7 @@
 
 #include <SDL.h>
 
+#if 0
 #define OV_EXCLUDE_STATIC_CALLBACKS
 #include <vorbis/codec.h>
 #include <vorbis/vorbisfile.h>
@@ -449,3 +450,50 @@ void audio_volume(int s, int m)
 }
 
 /*---------------------------------------------------------------------------*/
+#else
+
+void audio_init(void)
+{
+}
+
+void audio_free(void)
+{
+}
+
+void audio_play(const char *filename, float a)
+{
+}
+
+/*---------------------------------------------------------------------------*/
+
+void audio_music_play(const char *filename)
+{
+}
+
+void audio_music_queue(const char *filename, float t)
+{
+}
+
+void audio_music_stop(void)
+{
+}
+
+/*---------------------------------------------------------------------------*/
+
+void audio_music_fade_out(float t)
+{
+}
+
+void audio_music_fade_in(float t)
+{
+}
+
+void audio_music_fade_to(float t, const char *filename)
+{
+}
+
+void audio_volume(int s, int m)
+{
+}
+
+#endif

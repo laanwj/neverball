@@ -11,7 +11,7 @@
  * MERCHANTABILITY or  FITNESS FOR A PARTICULAR PURPOSE.   See the GNU
  * General Public License for more details.
  */
-
+#if 0
 #include "fs.h"
 #include "fs_ov.h"
 
@@ -34,3 +34,4 @@ long fs_ov_tell(void *datasource)
 {
     return fs_tell(datasource);
 }
+#endif
